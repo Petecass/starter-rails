@@ -49,3 +49,9 @@ Shoulda::Matchers.configure do |config|
     with.library :rails
   end
 end
+
+VCR.configure do |config|
+  config.configure_rspec_metadata!
+  config.cassette_library_dir = 'cassettes'
+  config.hook_into :webmock
+end
