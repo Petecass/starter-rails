@@ -22,13 +22,19 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'factory_girl_rails'
   gem 'faker'
+  gem 'guard', '>= 2.2.2', require: false
+  gem 'guard-livereload', require: false
+  gem 'guard-rspec'
+  gem 'rack-livereload'
+  gem 'rb-fsevent', require: false
   gem 'rspec-rails'
   gem 'rubocop', require: false
+  gem 'spring'
+  gem 'spring-commands-rspec'
 end
 
 group :development do
   gem 'listen', '~> 3.0.5'
-  gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'web-console', '>= 3.3.0'
 end
